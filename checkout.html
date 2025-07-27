@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إتمام الطلب - منتجات الألبان الطبيعية</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="checkout.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- الشريط العلوي -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-content">
+                <div class="contact-info">
+                    <span class="phone">
+                        <i class="fas fa-phone"></i>
+                        01234567890
+                    </span>
+                </div>
+                <div class="top-message">
+                    أفضل منتجات الألبان الطبيعية 100%
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="social-link instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="#" class="social-link twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- البار الأبيض مع اللوجو والتنقل -->
+    <header class="main-header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="Photos/logo.png" alt="شعار المصنع">
+                </div>
+                
+                <!-- قائمة التنقل -->
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">الرئيسية</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">
+                                الفئات
+                                <i class="fas fa-chevron-down dropdown-arrow"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="products.html">المنتجات</a></li>
+                                <li><a href="products.html">المواد الخام</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about.html" class="nav-link">من نحن</a></li>
+                        <li><a href="about.html#contact" class="nav-link">تواصل معنا</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <div class="header-icons">
+                        <!-- تم التعديل هنا -->
+                        <a href="cart.html" class="header-icon cart-icon">
+                            <i class="fas fa-shopping-cart"></i>
+                        </a>
+                        <a href="profile.html" class="header-icon profile-icon">
+                            <i class="fas fa-user"></i>
+                        </a>
+                    </div>
+                    <a href="login.html" class="login-btn">تسجيل دخول</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- مسار التنقل -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html" class="breadcrumb-link">الرئيسية</a>
+            <i class="fas fa-chevron-left"></i>
+            <a href="products.html" class="breadcrumb-link">المنتجات</a>
+            <i class="fas fa-chevron-left"></i>
+            <a href="cart.html" class="breadcrumb-link">سلة التسوق</a>
+            <i class="fas fa-chevron-left"></i>
+            <span class="current">إتمام الطلب</span>
+        </div>
+    </div>
+
+    <!-- محتوى صفحة الدفع -->
+    <main class="checkout-main">
+        <div class="container">
+            <div class="checkout-content">
+                <!-- قسم تفاصيل الفاتورة -->
+                <div class="billing-section">
+                    <h2 class="section-title">تفاصيل الفاتورة</h2>
+                    
+                    <form class="billing-form" id="billing-form">
+                        <div class="form-group">
+                            <label for="first-name">الاسم الأول*</label>
+                            <input type="text" id="first-name" name="firstName" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="street-address">عنوان الشارع*</label>
+                            <input type="text" id="street-address" name="streetAddress" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="apartment">الشقة، الطابق، إلخ (اختياري)</label>
+                            <input type="text" id="apartment" name="apartment">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="city">المدينة*</label>
+                            <input type="text" id="city" name="city" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">رقم الهاتف*</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">عنوان البريد الإلكتروني*</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- قسم ملخص الطلب -->
+                <div class="order-summary">
+                    <div class="summary-card">
+                        <!-- المنتجات -->
+                        <div class="order-items">
+                            <div class="order-item">
+                                <div class="item-image">
+                                    <img src="Photos/product1.jpg" alt="جبن لافاش كيري">
+                                </div>
+                                <div class="item-details">
+                                    <h4>جبن لافاش كيري</h4>
+                                    <span class="item-quantity">الكمية: 1</span>
+                                </div>
+                                <div class="item-price">
+                                    EGP 350
+                                </div>
+                            </div>
+
+                            <div class="order-item">
+                                <div class="item-image">
+                                    <img src="Photos/product1.jpg" alt="زبدة طبيعية">
+                                </div>
+                                <div class="item-details">
+                                    <h4>زبدة طبيعية</h4>
+                                    <span class="item-quantity">الكمية: 2</span>
+                                </div>
+                                <div class="item-price">
+                                    EGP 70
+                                </div>
+                            </div>
+
+                            <div class="order-item">
+                                <div class="item-image">
+                                    <img src="Photos/product1.jpg" alt="لبن طازج">
+                                </div>
+                                <div class="item-details">
+                                    <h4>لبن طازج</h4>
+                                    <span class="item-quantity">الكمية: 1</span>
+                                </div>
+                                <div class="item-price">
+                                    EGP 25
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- ملخص الأسعار -->
+                        <div class="price-summary">
+                            <div class="price-row">
+                                <span>المجموع الفرعي</span>
+                                <span>EGP 445</span>
+                            </div>
+                            <div class="price-row">
+                                <span>التوصيل</span>
+                                <span>EGP 20</span>
+                            </div>
+                            <div class="price-row total">
+                                <span>الإجمالي</span>
+                                <span>EGP 465</span>
+                            </div>
+                        </div>
+
+                        <!-- طرق الدفع -->
+                        <div class="payment-methods">
+                            <h3>طريقة الدفع</h3>
+                            
+                            <div class="payment-option">
+                                <input type="radio" id="bank-transfer" name="payment" value="bank">
+                                <label for="bank-transfer">
+                                    <i class="fas fa-university"></i>
+                                    تحويل بنكي
+                                </label>
+                            </div>
+
+                            <div class="payment-option">
+                                <input type="radio" id="cash-delivery" name="payment" value="cash" checked>
+                                <label for="cash-delivery">
+                                    <i class="fas fa-money-bill-wave"></i>
+                                    الدفع عند التسليم
+                                </label>
+                            </div>
+
+                            <div class="payment-option">
+                                <input type="radio" id="e-wallet" name="payment" value="wallet">
+                                <label for="e-wallet">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    المحافظ الإلكترونية
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- زر إتمام الطلب -->
+                        <button class="place-order-btn" onclick="placeOrder()">
+                            إتمام الطلب
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- الفورم المنبثقة للتحويل البنكي -->
+    <div id="bank-modal" class="payment-modal">
+        <div class="modal-content bank-modal-content">
+            <div class="modal-header bank-header">
+                <div class="header-content">
+                    <div class="bank-icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M2 8.5C2 7.11929 3.11929 6 4.5 6H19.5C20.8807 6 22 7.11929 22 8.5V15.5C22 16.8807 20.8807 18 19.5 18H4.5C3.11929 18 2 16.8807 2 15.5V8.5Z" stroke="currentColor" stroke-width="2"/>
+                            <path d="M7 10H17" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                            <path d="M7 14H11" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <div class="header-text">
+                        <h3>الدفع بالبطاقة البنكية</h3>
+                        <p>اختر نوع البطاقة وأدخل بياناتك بأمان</p>
+                    </div>
+                </div>
+                <button class="close-modal-btn" onclick="closePaymentModalWithDropdown()">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M15 5L5 15M5 5L15 15" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    </svg>
+                </button>
+            </div>
+            
+            <div class="bank-form-container">
+                <!-- خطوة اختيار نوع البطاقة -->
+                <div class="step-container card-selection-step">
+                    <div class="step-header">
+                        <div class="step-number">1</div>
+                        <h4>اختر نوع البطاقة</h4>
+                    </div>
+                    
+                    <div class="card-options">
+                        <div class="card-option" data-card="visa">
+                            <div class="card-visual">
+                                <div class="card-bg visa-bg">
+                                    <div class="card-pattern"></div>
+                                    <div class="card-logo">
+                                        <span>VISA</span>
+                                    </div>
+                                    <div class="card-number">•••• •••• •••• ••••</div>
+                                    <div class="card-holder">اسم حامل البطاقة</div>
+                                </div>
+                            </div>
+                            <div class="card-info">
+                                <h5>Visa</h5>
+                                <p>بطاقة فيزا</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card-option" data-card="mastercard">
+                            <div class="card-visual">
+                                <div class="card-bg mastercard-bg">
+                                    <div class="card-pattern"></div>
+                                    <div class="card-logo">
+                                        <div class="mc-circle mc-red"></div>
+                                        <div class="mc-circle mc-yellow"></div>
+                                    </div>
+                                    <div class="card-number">•••• •••• •••• ••••</div>
+                                    <div class="card-holder">اسم حامل البطاقة</div>
+                                </div>
+                            </div>
+                            <div class="card-info">
+                                <h5>Mastercard</h5>
+                                <p>بطاقة ماستركارد</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card-option" data-card="amex">
+                            <div class="card-visual">
+                                <div class="card-bg amex-bg">
+                                    <div class="card-pattern"></div>
+                                    <div class="card-logo">
+                                        <span>AMEX</span>
+                                    </div>
+                                    <div class="card-number">•••• •••••• •••••</div>
+                                    <div class="card-holder">اسم حامل البطاقة</div>
+                                </div>
+                            </div>
+                            <div class="card-info">
+                                <h5>American Express</h5>
+                                <p>بطاقة أمريكان إكسبريس</p>
+                            </div>
+                        </div>
+                        
+                        <div class="card-option" data-card="discover">
+                            <div class="card-visual">
+                                <div class="card-bg discover-bg">
+                                    <div class="card-pattern"></div>
+                                    <div class="card-logo">
+                                        <span>DISCOVER</span>
+                                    </div>
+                                    <div class="card-number">•••• •••• •••• ••••</div>
+                                    <div class="card-holder">اسم حامل البطاقة</div>
+                                </div>
+                            </div>
+                            <div class="card-info">
+                                <h5>Discover</h5>
+                                <p>بطاقة ديسكوفر</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- خطوة إدخال بيانات البطاقة -->
+                <div class="step-container card-details-step" style="display: none;">
+                    <div class="step-header">
+                        <div class="step-number">2</div>
+                        <h4>بيانات البطاقة</h4>
+                    </div>
+                    
+                    <form id="bank-form" class="bank-payment-form">
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label for="card-number">رقم البطاقة</label>
+                                <div class="input-wrapper">
+                                    <input type="text" id="card-number" name="cardNumber" placeholder="1234 5678 9012 3456" maxlength="19" required>
+                                    <div class="card-type-indicator"></div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="expiry-date">تاريخ الانتهاء</label>
+                                <div class="input-wrapper">
+                                    <input type="text" id="expiry-date" name="expiryDate" placeholder="MM/YY" maxlength="5" required>
+                                    <div class="input-icon">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M2 6H14M2 6C1.44772 6 1 5.55228 1 5V3C1 2.44772 1.44772 2 2 2H14C14.5523 2 15 2.44772 15 3V5C15 5.55228 14.5523 6 14 6M2 6V13C2 13.5523 2.44772 14 3 14H13C13.5523 14 14 13.5523 14 13V6" stroke="currentColor" stroke-width="1.5"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="cvv">رمز الأمان (CVV)</label>
+                                <div class="input-wrapper cvv-wrapper">
+                                    <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="3" required>
+                                    <div class="cvv-info">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <circle cx="8" cy="8" r="7" stroke="currentColor" stroke-width="1.5"/>
+                                            <path d="M8 12V8M8 4H8.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                        </svg>
+                                        <div class="cvv-tooltip">
+                                            <p>رمز الأمان المكون من 3-4 أرقام</p>
+                                            <p>يوجد خلف البطاقة</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group full-width">
+                                <label for="cardholder-name">اسم حامل البطاقة</label>
+                                <div class="input-wrapper">
+                                    <input type="text" id="cardholder-name" name="cardholderName" placeholder="الاسم كما هو مكتوب على البطاقة" required>
+                                    <div class="input-icon">
+                                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8 8C10.2091 8 12 6.20914 12 4C12 1.79086 10.2091 0 8 0C5.79086 0 4 1.79086 4 4C4 6.20914 5.79086 8 8 8Z" fill="currentColor"/>
+                                            <path d="M8 10C3.58172 10 0 13.5817 0 18H16C16 13.5817 12.4183 10 8 10Z" fill="currentColor"/>
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="button" class="back-btn" onclick="goBackToCardSelection()">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M10 12L6 8L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                العودة
+                            </button>
+                            <button type="submit" class="submit-btn">
+                                <span class="btn-text">تأكيد الدفع</span>
+                                <div class="btn-loader" style="display: none;">
+                                    <div class="spinner"></div>
+                                </div>
+                                <svg class="btn-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 8L8 12L4 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- الفورم المنبثقة للمحافظ الإلكترونية -->
+    <div id="wallet-modal" class="payment-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>المحافظ الإلكترونية</h3>
+                <button class="close-modal" onclick="closePaymentModalWithDropdown()">&times;</button>
+            </div>
+            <form id="wallet-form" class="payment-form">
+                <div class="wallet-options">
+                    <div class="wallet-option">
+                        <input type="radio" id="vodafone-cash" name="walletType" value="vodafone" required>
+                        <label for="vodafone-cash">
+                            <img src="Photos/vodafone.png" alt="Vodafone Cash">
+                            Vodafone Cash
+                        </label>
+                    </div>
+                    <div class="wallet-option">
+                        <input type="radio" id="instapay" name="walletType" value="instapay" required>
+                        <label for="instapay">
+                            <img src="Photos/insta.png" alt="InstaPay">
+                            InstaPay
+                        </label>
+                    </div>
+                    <div class="wallet-option">
+                        <input type="radio" id="orange-money" name="walletType" value="orange" required>
+                        <label for="orange-money">
+                            <img src="Photos/orange.png" alt="Orange Money">
+                            Orange Money
+                        </label>
+                    </div>
+                    <div class="wallet-option">
+                        <input type="radio" id="etisalat-cash" name="walletType" value="etisalat" required>
+                        <label for="etisalat-cash">
+                            <img src="Photos/etisalat.jpg" alt="Etisalat Cash">
+                            Etisalat Cash  
+                        </label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="wallet-number">رقم المحفظة*</label>
+                    <input type="tel" id="wallet-number" name="walletNumber" placeholder="01xxxxxxxxx" required>
+                </div>
+                <div class="form-group">
+                    <label for="wallet-pin">الرقم السري*</label>
+                    <input type="password" id="wallet-pin" name="walletPin" placeholder="****" maxlength="4" required>
+                </div>
+                <button type="submit" class="confirm-payment-btn">تأكيد الدفع</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script src="checkout.js"></script>
+</body>
+</html>
+
